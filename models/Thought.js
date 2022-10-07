@@ -13,7 +13,7 @@ const ReactionSchema = new Schema(
             max: 280
         },
         username: {
-            Type: String,
+            type: String,
             required: true
         },
         createdAt: {
@@ -27,7 +27,7 @@ const ReactionSchema = new Schema(
             getters: true
         }
     }
-)
+);
 
 const ThoughtSchema = new Schema(
     {
