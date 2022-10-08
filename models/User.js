@@ -1,5 +1,4 @@
 const { Schema, model } = require('mongoose');
-const validateEmail = require('../utils/validateEmail')
 
 
 const UserSchema = new Schema(
@@ -16,21 +15,25 @@ const UserSchema = new Schema(
             required: true,
 
         },
-        thoughts:[{
-            type: Schema.Types.ObjectId,
-            ref: 'Thought'
-        }],
-        friends:[{
-            type: Schema.Types.ObjectId,
-            ref: 'User'
-        }]
+        thoughts: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'Thought'
+            }
+        ],
+        friends: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: 'User'
+            }
+        ]
 
     },
     {
-        toJSON:{
-            virtuals:true,
+        toJSON: {
+            virtuals: true,
         },
-        id:false
+        id: false
     }
 );
 
